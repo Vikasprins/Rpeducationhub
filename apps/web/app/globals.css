@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f4f7ff;
+  --panel: #ffffff;
+  --panel-soft: #f8fbff;
+  --text: #0b1b3f;
+  --muted: #58709c;
+  --navy: #0b2a6b;
+  --navy-deep: #071a45;
+  --gold: #e6a817;
+  --gold-soft: #fff1c9;
+  --crimson: #c0392b;
+  --border: rgba(11, 42, 107, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(230, 168, 23, 0.11), transparent 25%),
+    radial-gradient(circle at top right, rgba(11, 42, 107, 0.14), transparent 28%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(230, 168, 23, 0.32);
+}
+
+.panel {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 80px rgba(11, 42, 107, 0.08);
+}
+
+.soft-grid {
+  background-image: linear-gradient(rgba(11, 42, 107, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(11, 42, 107, 0.05) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.badge {
+  border: 1px solid rgba(11, 42, 107, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--navy);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #e6a817, #f1c14b);
+  color: #0b1b3f;
+  box-shadow: 0 12px 30px rgba(230, 168, 23, 0.22);
+}
+
+.btn-secondary {
+  background: rgba(11, 42, 107, 0.08);
+  color: var(--navy);
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(11, 42, 107, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.95rem 1rem;
+  color: var(--text);
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: rgba(230, 168, 23, 0.8);
+  box-shadow: 0 0 0 4px rgba(230, 168, 23, 0.18);
+}
+
+.section-title {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.03em;
+}

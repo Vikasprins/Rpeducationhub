@@ -1,0 +1,19 @@
+{
+  "name": "rpeducationhub",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev:web\" \"npm run dev:api\"",
+    "dev:web": "npm --workspace @rpeducationhub/web run dev",
+    "dev:api": "npm --workspace @rpeducationhub/api run dev",
+    "build": "npm run build:web && npm run build:api",
+    "build:web": "npm --workspace @rpeducationhub/web run build",
+    "build:api": "npm --workspace @rpeducationhub/api run build",
+    "lint": "npm run lint:web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
