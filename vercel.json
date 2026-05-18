@@ -3,7 +3,7 @@
   "buildCommand": "npm run build --prefix apps/api",
   "installCommand": "npm install --workspaces",
   "env": {
-    "MONGO_URI": "@mongo_uri",
+    "MONGO_URI": "mongodb+srv://vikasprins15740_db_user:sU0AXxpVqIRpuvEc@students.tqwsfmr.mongodb.net/?appName=students",
     "JWT_SECRET": "@jwt_secret",
     "WEB_ORIGIN": "@web_origin",
     "ADMIN_USERNAME": "@admin_username",
