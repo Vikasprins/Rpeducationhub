@@ -4,10 +4,10 @@
   "installCommand": "npm install --workspaces",
   "env": {
     "MONGO_URI": "mongodb+srv://vikasprins15740_db_user:sU0AXxpVqIRpuvEc@students.tqwsfmr.mongodb.net/?appName=students",
-    "JWT_SECRET": "@jwt_secret",
-    "WEB_ORIGIN": "@web_origin",
-    "ADMIN_USERNAME": "@admin_username",
-    "ADMIN_PASSWORD": "@admin_password"
+    "JWT_SECRET": "replace-with-a-long-random-secret",
+    "WEB_ORIGIN": "http://localhost:3000",
+    "ADMIN_USERNAME": "admin",
+    "ADMIN_PASSWORD": "Admin@12345"
   },
   "functions": {
     "apps/api/api/index.js": {
