@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build --prefix apps/api",
+  "installCommand": "npm install --workspaces",
+  "env": {
+    "MONGO_URI": "@mongo_uri",
+    "JWT_SECRET": "@jwt_secret",
+    "WEB_ORIGIN": "@web_origin",
+    "ADMIN_USERNAME": "@admin_username",
+    "ADMIN_PASSWORD": "@admin_password"
+  },
+  "functions": {
+    "apps/api/api/index.js": {
+      "runtime": "nodejs20.x",
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  }
+}
