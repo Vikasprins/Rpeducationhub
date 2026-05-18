@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm run build --prefix apps/api",
-  "installCommand": "npm install --workspaces",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "env": {
     "MONGO_URI": "mongodb+srv://vikasprins15740_db_user:sU0AXxpVqIRpuvEc@students.tqwsfmr.mongodb.net/?appName=students",
     "JWT_SECRET": "replace-with-a-long-random-secret",
