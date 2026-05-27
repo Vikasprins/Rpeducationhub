@@ -5,7 +5,7 @@ import morgan from 'morgan';
 import { createApiRouter } from './routes/index.js';
 import { requireAuth } from './middleware/auth.js';
 
-export function createApp({ webOrigin }) {
+export function createApp({ webOrigin, ensureDatabaseConnected } = {}) {
   const app = express();
 
   app.use(helmet());
@@ -17,6 +17,22 @@ export function createApp({ webOrigin }) {
   app.get('/health', (_req, res) => {
     res.json({ ok: true });
   });
+
+  if (ensureDatabaseConnected) {
+    app.use(async (req, res, next) => {
+      if (req.path === '/health') {
+        return next();
+      }
+
+      try {
+        await ensureDatabaseConnected();
+        return next();
+      } catch (error) {
+        console.error('Database unavailable:', error.message);
+        return res.status(503).json({ message: 'Database unavailable' });
+      }
+    });
+  }
 
   app.use('/api', createApiRouter());
 
