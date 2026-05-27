@@ -8,6 +8,7 @@ if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
 export const env = {
   port: Number(process.env.PORT || 4000),
   mongoUri: process.env.MONGO_URI,
+  mongoFallbackUri: process.env.MONGO_FALLBACK_URI || 'mongodb://127.0.0.1:27017/rpeducationhub',
   jwtSecret: process.env.JWT_SECRET,
   webOrigin: process.env.WEB_ORIGIN || 'http://localhost:3000',
   adminUsername: process.env.ADMIN_USERNAME || 'admin',

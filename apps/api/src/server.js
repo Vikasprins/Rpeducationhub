@@ -4,7 +4,7 @@ import { createApp } from './app.js';
 import { seedDefaultUsers } from './routes/auth.js';
 
 async function bootstrap() {
-  await connectDatabase(env.mongoUri);
+  await connectDatabase(env.mongoUri, env.mongoFallbackUri);
   await seedDefaultUsers();
 
   const app = createApp({ webOrigin: env.webOrigin });
