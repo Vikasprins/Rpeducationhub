@@ -1,1 +1,1 @@
-export { default } from '../apps/api/api/index.js';
+export { default } from '../apps/api/index.js';

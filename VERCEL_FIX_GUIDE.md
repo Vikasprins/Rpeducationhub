@@ -3,7 +3,7 @@
 ## Issues Fixed
 
 1. ✅ Created `vercel.json` - Proper Vercel configuration for monorepo
-2. ✅ Created serverless function handler - `apps/api/api/index.js` for Vercel
+2. ✅ Created serverless function handler - `apps/api/index.js` for Vercel
 3. ✅ Updated environment configuration - Better env var handling
 4. ✅ Improved MongoDB connection - Better error handling and connection pooling
 5. ✅ Added validation - Required env vars are now validated
@@ -11,7 +11,7 @@
 ## Files Modified
 
 1. **`vercel.json`** - New - Vercel project configuration
-2. **`apps/api/api/index.js`** - New - Serverless function handler
+2. **`apps/api/index.js`** - New - Serverless function handler
 3. **`apps/api/src/config/env.js`** - Updated - Better env var validation
 4. **`apps/api/src/config/db.js`** - Updated - Better MongoDB connection handling
 

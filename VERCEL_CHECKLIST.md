@@ -3,7 +3,7 @@
 ## 🔧 Code Changes (COMPLETED)
 
 - [x] Created `vercel.json` configuration
-- [x] Created `apps/api/api/index.js` serverless handler
+- [x] Created `apps/api/index.js` serverless handler
 - [x] Updated `apps/api/src/config/env.js` with validation
 - [x] Improved `apps/api/src/config/db.js` connection handling
 

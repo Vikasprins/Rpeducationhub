@@ -1,7 +1,7 @@
-import { connectDatabase } from '../src/config/db.js';
-import { env } from '../src/config/env.js';
-import { createApp } from '../src/app.js';
-import { seedDefaultUsers } from '../src/routes/auth.js';
+import { connectDatabase } from './src/config/db.js';
+import { env } from './src/config/env.js';
+import { createApp } from './src/app.js';
+import { seedDefaultUsers } from './src/routes/auth.js';
 
 let app;
 let dbConnected = false;
@@ -55,7 +55,6 @@ export default async (req, res) => {
     if (!app) {
       app = await initializeApp();
     }
-    // Call Express app with request and response
     return app(req, res);
   } catch (error) {
     console.error('Function error:', error);
