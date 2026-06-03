@@ -1,6 +1,6 @@
 import { connectDatabase } from './src/config/db.js';
 import { env } from './src/config/env.js';
-import { createApp } from './src/app.js';
+import { createApp } from './src/createApp.js';
 import { seedDefaultUsers } from './src/routes/auth.js';
 
 let app;

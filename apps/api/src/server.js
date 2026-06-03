@@ -1,6 +1,6 @@
 import { connectDatabase } from './config/db.js';
 import { env } from './config/env.js';
-import { createApp } from './app.js';
+import { createApp } from './createApp.js';
 import { seedDefaultUsers } from './routes/auth.js';
 
 async function bootstrap() {
